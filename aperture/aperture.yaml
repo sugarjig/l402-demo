@@ -1,0 +1,21 @@
+listenaddr: "aperture:8081"
+staticroot: "./static"
+servestatic: false
+debuglevel: "debug"
+autocert: false
+servername: aperture
+profile: 9999
+authenticator:
+  tlspath: "~/.aperture/lnd/tls.cert"
+  macdir: "~/.aperture/lnd/data/chain/bitcoin/testnet"
+  network: "testnet"
+  disable: false
+dbbackend: "sqlite"
+services:
+  - name: "hello"
+    hostregexp: '^.*$'
+    pathregexp: '^/hello$'
+    address: "hello:3001"
+    protocol: http
+    capabilities: "add,subtract"
+    price: 0

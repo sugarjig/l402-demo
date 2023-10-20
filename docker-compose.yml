@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  aperture:
+    image: lightninglabs/aperture:v0.2-beta
+    platform: linux/amd64
+    ports:
+      - '8081:8081'
+    volumes:
+      - ./aperture:/root/.aperture
+    entrypoint: ["aperture", "--authenticator.lndhost=${LNDHOST}"]
+  hello:
+    build: service
+    ports:
+      - '3001:3001'

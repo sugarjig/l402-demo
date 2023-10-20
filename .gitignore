@@ -1,0 +1,6 @@
+.idea
+aperture
+!aperture/aperture.yaml
+node_modules
+.DS_Store
+.env
